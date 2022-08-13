@@ -17,6 +17,9 @@
 		723F591B28A4E3EA00E77FDB /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723F591A28A4E3EA00E77FDB /* Photo.swift */; };
 		723F591D28A4E46200E77FDB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723F591C28A4E46200E77FDB /* MainViewController.swift */; };
 		723F591F28A4E53300E77FDB /* PhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723F591E28A4E53300E77FDB /* PhotoTableViewCell.swift */; };
+		7263E9BB28A7EDA800274536 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7263E9BA28A7EDA800274536 /* DetailsViewController.swift */; };
+		7263E9BD28A7EDDA00274536 /* DetailsViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7263E9BC28A7EDDA00274536 /* DetailsViewPresenter.swift */; };
+		7263E9BF28A7F2B600274536 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7263E9BE28A7F2B600274536 /* Builder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		723F591A28A4E3EA00E77FDB /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		723F591C28A4E46200E77FDB /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		723F591E28A4E53300E77FDB /* PhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableViewCell.swift; sourceTree = "<group>"; };
+		7263E9BA28A7EDA800274536 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		7263E9BC28A7EDDA00274536 /* DetailsViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewPresenter.swift; sourceTree = "<group>"; };
+		7263E9BE28A7F2B600274536 /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				720B851528A4FC8300031811 /* NetworkService.swift */,
+				7263E9BE28A7F2B600274536 /* Builder.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -72,9 +79,10 @@
 		723F58FE28A4E1BB00E77FDB /* ImagesAlbum_MVP */ = {
 			isa = PBXGroup;
 			children = (
+				7263E9B728A7ED4400274536 /* DetailsView */,
+				723F591328A4E25400E77FDB /* App */,
 				720B851728A500B500031811 /* Services */,
 				723F591428A4E2BF00E77FDB /* MainView */,
-				723F591328A4E25400E77FDB /* App */,
 				723F590828A4E1BD00E77FDB /* Assets.xcassets */,
 				723F590A28A4E1BD00E77FDB /* LaunchScreen.storyboard */,
 				723F590D28A4E1BD00E77FDB /* Info.plist */,
@@ -125,6 +133,31 @@
 				720B851828A51CE500031811 /* PhotoCellPresenter.swift */,
 			);
 			path = Presenters;
+			sourceTree = "<group>";
+		};
+		7263E9B728A7ED4400274536 /* DetailsView */ = {
+			isa = PBXGroup;
+			children = (
+				7263E9B928A7ED8000274536 /* View */,
+				7263E9B828A7ED7B00274536 /* Presenter */,
+			);
+			path = DetailsView;
+			sourceTree = "<group>";
+		};
+		7263E9B828A7ED7B00274536 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				7263E9BC28A7EDDA00274536 /* DetailsViewPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		7263E9B928A7ED8000274536 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7263E9BA28A7EDA800274536 /* DetailsViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,8 +230,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7263E9BD28A7EDDA00274536 /* DetailsViewPresenter.swift in Sources */,
 				723F591B28A4E3EA00E77FDB /* Photo.swift in Sources */,
 				723F590028A4E1BB00E77FDB /* AppDelegate.swift in Sources */,
+				7263E9BF28A7F2B600274536 /* Builder.swift in Sources */,
+				7263E9BB28A7EDA800274536 /* DetailsViewController.swift in Sources */,
 				723F591F28A4E53300E77FDB /* PhotoTableViewCell.swift in Sources */,
 				723F591928A4E35500E77FDB /* MainViewPresenter.swift in Sources */,
 				723F590228A4E1BB00E77FDB /* SceneDelegate.swift in Sources */,

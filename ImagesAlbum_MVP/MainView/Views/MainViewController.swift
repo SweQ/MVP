@@ -11,13 +11,13 @@ class MainViewController: UIViewController {
     
     var presenter: MainViewPresenterProtocol!
     
-    var tableView: UITableView = UITableView()
+    private var tableView: UITableView = UITableView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Main VC"
         navigationController?.navigationBar.prefersLargeTitles = true
-        presenter = MainViewPresenter(view: self)
+        
         setupTableView()
     }
 }
@@ -68,6 +68,13 @@ extension MainViewController: UITableViewDataSource {
 extension MainViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         100.0
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedPhoto = presenter.photos[indexPath.row]
+        
+        let detailView = Builder.createDetailsView(photo: selectedPhoto)
+        navigationController?.pushViewController(detailView, animated: true)
     }
 }
 
