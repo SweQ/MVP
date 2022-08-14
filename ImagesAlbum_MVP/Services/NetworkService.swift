@@ -19,12 +19,10 @@ class NetworkService: NetworkServiceProtocol {
 
     var urlSession = URLSession.shared
     
-    
     func getPhotos(
         from url: URL,
         completion: @escaping (Result<[Photo], Error>) -> Void
     ) {
-        
         urlSession.dataTask(with: url) { data, _, error in
             if let error = error {
                 print(error.localizedDescription)
@@ -39,8 +37,6 @@ class NetworkService: NetworkServiceProtocol {
                     completion(.success(photos))
                 }
             }
-
-            
         }.resume()
     }
     
@@ -68,8 +64,6 @@ class NetworkService: NetworkServiceProtocol {
             }
         }
         downloadImageDataTask?.resume()
-        
     }
-    
-    
+
 }

@@ -15,6 +15,7 @@ protocol DetailsViewProtocol: AnyObject {
 
 protocol DetailsViewPresenterProtocol: AnyObject {
     var photo: Photo { get set }
+    var view: DetailsViewProtocol? { get set }
     func downloadImage()
     func loadPhotoTitle()
 }

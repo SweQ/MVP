@@ -14,6 +14,7 @@ protocol MainViewProtocol: AnyObject {
 
 protocol MainViewPresenterProtocol: AnyObject {
     var photos: [Photo] {get set}
+    var view: MainViewProtocol? { get set}
     var networkService: NetworkServiceProtocol {get set}
     func getPhotos()
 }
